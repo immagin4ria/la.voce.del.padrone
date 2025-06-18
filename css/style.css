@@ -1,9 +1,10 @@
 body, html {
   font-family: 'Jost', sans-serif;
   height: 100%;
-  margin: 0;
+  margin: auto;
+  margin-top: 50px;
   padding: 0;
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -37,17 +38,34 @@ header h1 a {
   color: #fff;
 }
 
+.word{
+  display: inline-block;
+}
+
+.spaced{
+  margin-left: clamp(2rem, 10vw, 6rem);
+  margin-right: clamp(2rem, 10vw, 6rem);
+}
+
 nav ul {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 0;
+  gap: 40px;
+  margin: 10px;
+  max-width: 100%;
 }
 
 nav li {
-  margin: 10px 100px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
 }
 
 nav a {
@@ -62,7 +80,8 @@ nav a:hover {
 }
 
 nav a:active {
-  text-decoration: underline dashed;
+  text-decoration: underline;
+  text-decoration-style: dashed;
 }
 
 .hero {
@@ -113,7 +132,7 @@ section.titolo-brani h1 {
   text-align: center;
   font-weight: 600;
   color: #157fac;
-  font-size: 2em;
+  font-size: 40px;
   margin: 30px 0;
 }
 
