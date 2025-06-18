@@ -1,0 +1,478 @@
+body, html {
+  font-family: 'Jost', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e3356;
+  margin: 0;
+  padding: 20px;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.word {
+  display: inline-block;
+}
+
+.spaced {
+  margin-left: clamp(2rem, 10vw, 6rem);
+  margin-right: clamp(2rem, 10vw, 8rem);
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 10px 100px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0e3356;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #98D4E5;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:active {
+  text-decoration: underline dashed;
+}
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.img-desktop,
+.img-mobile {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.img-desktop {
+  display: block;
+}
+
+.hero h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #0e3356;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 90%;
+  width: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero h2 a {
+  color: #0e3356;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero h2 a:hover {
+  color: #98D4E5;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero h2 a:visited {
+  color: #0e3356;
+}
+
+section.titolo h1,
+section.titolo-brani h1 {
+  text-align: center;
+  font-weight: 600;
+  color: #157fac;
+  font-size: 2em;
+  margin: 30px 0;
+}
+
+.lista-brani {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.lista-brani a {
+  text-decoration: none;
+  color: #0e3356;
+  font-weight: bold;
+}
+
+section.canzone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 12rem;
+}
+
+.vinile {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.vinile img {
+  display: block;
+  width: 25vw;
+  max-width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.canzone .testo {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.testo h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #157fac;
+  margin-top: 1rem;
+}
+
+.testo p {
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.testoalbum p {
+  margin-bottom: 2rem;
+}
+
+section.testoalbum {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 0 1.5rem; 
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color:black; 
+  text-align: left;
+}
+
+section.brani-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brani-album a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #157fac;
+  display: block;
+  text-align: center;
+}
+
+.brani-album a:hover {
+  text-decoration: underline;
+}
+
+.brani-album a:active {
+  color: #0e3356;
+}
+
+section.titolo img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.battiato {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto 32px;
+  max-width: 1200px;
+  padding: 0 5vw;
+}
+
+.battiato-riga {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.fotobattiato {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.fotobattiato img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.battiato-ere {
+  flex: 1;
+  max-width: 700px;
+}
+
+.battiato-ere h4 {
+  font-weight: 700;
+  font-size: 2em;
+  color: #157fac;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.battiato-ere p {
+  text-align: left;
+  line-height: 1.8;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 2em;
+  color: #157fac;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #0e3356;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+@media (min-width: 769px) {
+  .battiato-ere p {
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.4;
+    width: 90%;
+  }
+
+  .testo {
+    padding: 0 1rem;
+  }
+
+  .brani img {
+    max-width: 100%;
+  }
+
+  .vinile {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .vinile img {
+   display: none;
+  }
+
+  .brani {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.canzone {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+  }
+
+  .brani-album a {
+    font-size: 1.2rem;
+  }
+
+ .battiato-riga {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .fotobattiato {
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .fotobattiato img {
+    width: 100%;
+    height: auto;
+    display: block;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .battiato-ere {
+    width: 90%;
+    padding: 0 1rem;
+    text-align: left;
+    align-self: center;
+  }
+
+  .battiato-ere h4 {
+    text-align: center;
+  }
+
+  .battiato-ere p {
+    text-align: left;
+  }
+
+  .footer {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav li {
+    margin: 5px 20px;
+  }
+
+  .hero .img-desktop {
+    width: 0;
+    display: none;
+  }
+
+  .hero h2 {
+    top: 40%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+.battiato-riga {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .fotobattiato {
+    width: 80vw;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .fotobattiato img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .battiato-ere {
+    width: 90%;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .battiato-ere h4 {
+    text-align: center;
+  }
+
+  .battiato-ere p {
+    text-align: left;
+  }
+
+  .img-mobile {
+    display: block;
+  }
+}
+
+
